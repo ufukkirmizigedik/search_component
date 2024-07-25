@@ -1,19 +1,65 @@
-Overview
-This program is designed to facilitate the search for parts listed in an Excel spreadsheet on multiple websites. Specifically, it searches for parts listed in the "Name" column and provides corresponding references by populating the "Reference" column with links when matches are found. The tool is versatile, allowing users to add additional websites for searching if desired.
+# Поиск продуктов и инструментов
 
-Features
-Multi-Site Search: The program concurrently searches for parts on three different websites.
-Dynamic Linking: Automatically generates links in the "Reference" column when a match is found on any of the specified websites.
-Customizable: Users can easily add or remove websites based on their preferences or requirements.
-How to Use
-Prepare Your Excel Spreadsheet:
+Этот проект представляет собой программу для поиска продуктов и инструментов по названиям из Excel-файла. Он использует графический интерфейс на базе Tkinter для загрузки файла и выполняет поиск по трем каталогам: Weller, DMC и Harwin.
 
-Make sure your Excel spreadsheet has a column labeled "name" containing the parts you want to search for.
-Optionally, you can have a pre-existing "reference" column to capture the links.
-Run the Program:
+## Функции
 
-Execute the program and provide the path to your Excel file when prompted.
-Sit Back and Relax:
+- Загрузка Excel-файла через графический интерфейс.
+- Поиск продуктов в каталогах Weller, DMC и Harwin.
+- Обновление Excel-файла с добавлением ссылок на продукты.
+- Сохранение обновленного файла и автоматическое его открытие.
 
-The program will systematically search for each part on the specified websites.
-Once a match is found, the program will automatically populate the "Reference" column with the corresponding links.
+## Установка
+
+Следуйте этим шагам для установки и запуска проекта на вашем локальном компьютере:
+
+1. Клонируйте репозиторий:
+    ```bash
+    git clone https://github.com/username/repository-name.git
+    ```
+
+2. Перейдите в директорию проекта:
+    ```bash
+    cd repository-name
+    ```
+
+3. Создайте виртуальную среду и активируйте её:
+    ```bash
+    python -m venv env
+    source env/bin/activate  # Для Windows: env\Scripts\activate
+    ```
+
+
+4. Установите необходимые зависимости:
+    ```bash
+    pip install pandas openpyxl
+    ```
+
+## Использование
+
+1. Запустите приложение:
+    ```bash
+    python parser.py
+    ```
+
+2. Нажмите кнопку "Attach" и выберите ваш Excel-файл для загрузки.
+
+3. Нажмите кнопку "Start" для начала обработки файла. Программа скопирует выбранный файл в целевую папку, выполнит поиск продуктов и обновит ссылки в файле.
+
+4. Обновленный файл будет сохранен под именем `guncellenmis_veri.xlsx` и автоматически откроется.
+
+## Пример структуры проекта
+
+
+project/
+│
+├── parser.py # Основной код парсера
+├── weller.py # Модуль для поиска продуктов Weller
+├── dmc.py # Модуль для поиска продуктов DMC
+├── harvin.py # Модуль для поиска продуктов Harwin
+└── requirements.txt # Зависимости проекта
+
+## Контакты
+
+Если у вас есть вопросы или предложения, пожалуйста, свяжитесь с нами по электронной почте: ufukkirmizigedik1984@gmail.com
+
