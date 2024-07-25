@@ -15,12 +15,12 @@
 
 1. Клонируйте репозиторий:
     ```bash
-    git clone https://github.com/username/repository-name.git
+    git clone https://github.com/username/search_component.git 
     ```
 
 2. Перейдите в директорию проекта:
     ```bash
-    cd repository-name
+    cd search_component
     ```
 
 3. Создайте виртуальную среду и активируйте её:
